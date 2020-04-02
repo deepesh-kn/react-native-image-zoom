@@ -29,7 +29,7 @@ export default class ImageViewer extends React.Component<Props, State> {
 
   // 缩放大小
   private scale = INITIAL_SCALE;
-  private animatedScale = new Animated.Value(1);
+  private animatedScale = new Animated.Value(INITIAL_SCALE);
   private zoomLastDistance: number | null = null;
   private zoomCurrentDistance = 0;
 
@@ -466,7 +466,7 @@ export default class ImageViewer extends React.Component<Props, State> {
     this.positionX = 0;
     this.positionY = 0;
     this.scale = INITIAL_SCALE;
-    this.animatedScale.setValue(1);
+    this.animatedScale.setValue(INITIAL_SCALE);
   };
 
   public panResponderReleaseResolve = () => {
