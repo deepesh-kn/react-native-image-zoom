@@ -640,6 +640,14 @@ export default class ImageViewer extends React.Component<Props, State> {
     this.animatedPositionY.setValue(this.positionY);
   }
 
+  public getImagePosition() {
+    return {
+      positionX: this.positionX,
+      positionY: this.positionY,
+      scale: this.scale,
+      zoomCurrentDistance: this.zoomCurrentDistance
+    }
+  }
   public render() {
     const animateConf = {
       transform: [
