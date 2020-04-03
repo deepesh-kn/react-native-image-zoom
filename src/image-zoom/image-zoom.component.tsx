@@ -645,7 +645,11 @@ export default class ImageViewer extends React.Component<Props, State> {
       positionX: this.positionX,
       positionY: this.positionY,
       scale: this.scale,
-      zoomCurrentDistance: this.zoomCurrentDistance
+      zoomCurrentDistance: this.zoomCurrentDistance,
+      imageWidth: this.props.imageWidth,
+      imageHeight: this.props.imageHeight,
+      viewWidth: this.props.cropWidth,
+      viewHeight: this.props.cropHeight
     }
   }
   public render() {
